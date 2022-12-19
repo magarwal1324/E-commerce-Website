@@ -1,8 +1,10 @@
 *{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     font-family: sans-serif;
+    box-sizing: border-box;
 }
+/* background image */
 .container{
     background-image:linear-gradient(rgba(0, 0, 0, 0.676),rgba(0, 0, 0, 0.868)),url(2.png);
     width: 100%;
@@ -14,7 +16,7 @@
 .top-bar{
     width: 85%;
     margin: auto;
-    padding: 4px 0px;
+    padding: 4px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -29,7 +31,7 @@
 .top-bar ul li {
     list-style: none;
     display: inline-block;
-    margin: 0px 20px;
+    margin: 0 20px;
     position: relative;
 
 }
@@ -37,7 +39,7 @@
     text-decoration: none;
     color: rgb(15, 104, 199);
     text-transform: uppercase;
-    
+   
     
 }
 .top-bar ul li::after{
@@ -47,13 +49,13 @@
     background:rgb(15, 104, 199);
     position: absolute;
     left: 0px;
-    /* bottom: -7px; */
+     bottom: -7px; 
     transition: 0.5s;
 }
 .top-bar ul li:hover::after{
     width: 100%;
 }
-
+/* content */
 .content{
     width: 100%;
     position: absolute;
@@ -76,6 +78,7 @@ color: wheat;
     font-size: 20px;
     color: wheat;
 }
+/* button on header */
 button{
     width: 200px;
     padding: 15px 0;
@@ -107,3 +110,78 @@ button:hover span{
 button:hover{
     border: none;
 }
+/* responsive */
+@media screen and (max-width:1090px){
+    #menu-icon{
+        display: block;
+    }
+}
+
+/* section of services */
+.service{
+    width: 100%;
+    height: 100vh;
+    padding: 0 8%;
+}
+.service h1{
+    text-align: center;
+    padding-top: 10%;
+    margin-bottom: 60px;
+font-weight: 600;
+position:relative;
+}
+.service h3{
+    font-size: 40px;
+    padding: 5%;
+    text-align: left;
+
+}
+.service p{
+    font-size: 20px;
+}
+.service h1::after{
+    content: '';
+    background: rgb(15, 104, 199);
+    width: 100px;
+    height: 5px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 30px;
+
+}
+.sec{
+    text-align: center;
+    padding: 25px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    background: transparent;
+    transition: transform 0.5s,backgrond 0.5s;
+
+}
+.sec i{
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: rgb(15, 104, 199);
+}
+.sec h2{
+    font-weight: 600;
+    margin-bottom: 8px;
+
+}
+.sec:hover{
+    background: rgb(15, 104, 199);
+    color: antiquewhite;
+    transform: scale(1.05);
+}
+.sec:hover i{
+    color:black;
+}
+
+/*  */
